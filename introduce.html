@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>禾思科技-关于我们</title>
+	<meta name="keywords" content="关于" />
+	<meta name="description" content="关于" /> 
+	<link rel="stylesheet" type="text/css" href="css/style_5.css">
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.js"></script>
+	<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+	<script src="js/scrollreveal.js"></script>
+	<script src="js/canvas-particle.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" media="screen" />
+
+	<script type="text/javascript">
+		$(document).ready(function (e) {
+			window.sr = ScrollReveal({
+				reset: true
+			});
+			sr.reveal(".banner_div h1,.banner_div p", {
+				duration: 1000,
+				scale: 1,
+				origin: 'top',
+				distance: '20px'
+			}, 500);
+
+			var currentScrollTop = 0;
+
+
+			// 返回顶部
+			$(window).scroll(function () {
+				if ($(window).scrollTop() > 500) {
+					$(".toTop").fadeIn(1500);
+				} else {
+					$(".toTop").fadeOut(1500);
+				}
+			});
+
+			//当点击跳转链接后，回到页面顶部位置  
+			$(".toTop").click(function () {
+				//$('body,html').animate({scrollTop:0},1000);  
+				if ($('html').scrollTop()) {
+					$('html').animate({
+						scrollTop: 0
+					}, 1000);
+					return false;
+				}
+				$('body').animate({
+					scrollTop: 0
+				}, 1000);
+				return false;
+			});
+
+
+
+
+		});
+	</script>
+</head>
+
+<body>
+	<div class="header">
+		<div class="header_div">
+			<div id="banner_canvas"></div>
+			<div class="logo"><a href="index.html" title="禾思科技"><img src="images/log.png" alt="禾思科技" />禾思科技</a></div>
+			<div class="nav">
+				<ul>
+					<li><a href="solve.html" data-transition="slide" title="解决方案">解决方案</a></li>
+					<li><a href="product.html" data-transition="slide" title="产品介绍">产品介绍</a></li>
+					<li><a href="technology.html" data-transition="slide" title="核心技术">核心技术</a></li>
+					<li><a href="introduce.html" data-transition="slide" title="关于我们" style="color:gray">关于我们</a></li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var config = {
+			vx: 3, //点x轴速度,正为右，负为左
+			vy: 3, //点y轴速度
+			height: 2, //点高宽，其实为正方形，所以不宜太大
+			width: 2,
+			count: 120, //点个数
+			color: "255,255,255", //点颜色
+			stroke: "255,255,255", //线条颜色
+			dist: 15000, //点吸附距离
+			e_dist: 20000, //鼠标吸附加速距离
+			max_conn: 20 //点到点最大连接数
+		}
+		//创建粒子效果canvas
+		CanvasParticle(config);
+	</script>
+	<div class="banner_div"><img src="images/Background.png" alt="关于" />
+		<h1>"云+端"视觉解决方案的领导者</h1>
+		<p></p>
+	</div>
+	<div class="container">
+		<div class="company-introduction">
+
+			<div class="content">
+				<div class="content-left">
+					<ul class="product_list">
+						<li>
+							<a href="javascript:void(0)" class="img_a" data-id="4" title=""><img src="images/极致用户体验.png" alt="" /></a>
+							<h3><a href="javascript:void(0)" data-id="4" title="">机器人产业</a></h3>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10年之后，每个人都将有一个机器人助理，机器人助理可以认得我们，教我们学习，帮我们打扫房间。我们愿为机器人产业付能，让机器人成为人类的好朋友！</p>
+						</li>
+					</ul>
+				</div>
+				<div class="content-right">
+					<h1>公司介绍</h1>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;深圳禾思科技有限公司是一家专注于计算机视觉的人工智能科技公司，公司深耕人工智能视觉算法、芯片以及大数据研究，用技术打造极致的产品，为各个行业提供业界领先的"云"+"端"视觉解决方案，为智慧建筑、智慧商业、智能家居、机器人产业、智能终端等提供顶尖的视觉服务。</p>
+				</div>
+			</div>
+		</div>
+		<div class="team-introduction blue white">
+			<div class="content">
+				<div class="content-left">
+					<h1>团队介绍</h1>
+					<p>我们是一群年轻人、有梦想的人工智能创业者，核心团队来自于cmu卡耐基梅陇大学、上海交通大学、西安交通大学人工智能实验室，曾在百度、腾讯、微软等公司从事视觉研究工作。</p>
+					<p>人工智能时代已经到来，我们相信在不久的将来，万物将被唤醒。我们希望用"云"+"端"视觉解决方案，让万物拥有一双明亮的眼睛，看懂这个世界！</p>
+				</div>
+				<div class="content-right">
+					<ul class="product_list">
+						<li>
+							<a href="javascript:void(0)" class="img_a" data-id="4" title=""><img src="images/极致用户体验.png" alt="" /></a>
+							<h3><a href="javascript:void(0)" data-id="4" title="">机器人产业</a></h3>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10年之后，每个人都将有一个机器人助理，机器人助理可以认得我们，教我们学习，帮我们打扫房间。我们愿为机器人产业付能，让机器人成为人类的好朋友！</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="contact">
+
+			<div class="content">
+				<div class="content-left">
+					<ul class="product_list">
+						<li>
+							<a href="javascript:void(0)" class="img_a" data-id="4" title=""><img src="images/极致用户体验.png" alt="" /></a>
+							<h3><a href="javascript:void(0)" data-id="4" title="">机器人产业</a></h3>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10年之后，每个人都将有一个机器人助理，机器人助理可以认得我们，教我们学习，帮我们打扫房间。我们愿为机器人产业付能，让机器人成为人类的好朋友！</p>
+						</li>
+					</ul>
+				</div>
+				<div class="content-right">
+					<h1>联系方式</h1>
+					<p>电话：0755-2342323</p>
+					<p>邮箱：510897282@qq.com</p>
+					<p>地址：深圳市南山区软件产业基地5C栋1003E</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer-center">
+			<div class="telephone">
+				<span>电话：0755-2342323</span>
+			</div>
+			<div class="email">
+				<span>邮箱：yzl@heils.cn</span>
+			</div>
+			<div class="address">
+				<span>地址：深圳市南山区软件产业基地5C栋1003E</span>
+			</div>
+
+		</div>
+		<div class="footer-right">
+			<ul>
+				<li><a href="solve.html" title="解决方案">解决方案<span>|</span></a></li>
+				<li><a href="product.html" title="产品介绍">产品介绍<span>|</span></a></li>
+				<li><a href="technology.html" title="核心技术">核心技术<span>|</span></a></li>
+				<li><a href="introduce.html" title="关于我们">关于我们</a></li>
+			</ul>
+			<div class="info">
+				<p>Copyright©2017 深圳禾思科技有限公司</p>
+				<p>陕ICP备16002340号</p>
+			</div>
+
+		</div>
+
+	</div>
+	<div class="toTop"></div>
+	<div class="backDiv"></div>
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>禾思科技-解决方案</title>
+    <meta name="keywords" content="关于" />
+    <meta name="description" content="关于" />
+    <link rel="stylesheet" type="text/css" href="css/style_5.css">
+    <link href="css/coopcase.css" rel="stylesheet" media="screen">
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.js"></script>
+    <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+    <script src="js/scrollreveal.js"></script>
+    <script src="js/canvas-particle.js"></script>
+    <script type="text/javascript" src="js/offlights.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/scrollreveal.min.js"></script>
+    <script type="text/javascript" src="js/coopcase.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" media="screen" />
+
+    <script type="text/javascript">
+        $(document).ready(function (e) {
+            window.sr = ScrollReveal({
+                reset: true
+            });
+            sr.reveal(".banner_div h1,.banner_div p", {
+                duration: 1000,
+                scale: 1,
+                origin: 'top',
+                distance: '20px'
+            }, 500);
+
+            var currentScrollTop = 0;
+
+
+
+            // 返回顶部
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 500) {
+                    $(".toTop").fadeIn(1500);
+                } else {
+                    $(".toTop").fadeOut(1500);
+                }
+            });
+
+            //当点击跳转链接后，回到页面顶部位置  
+            $(".toTop").click(function () {
+                //$('body,html').animate({scrollTop:0},1000);  
+                if ($('html').scrollTop()) {
+                    $('html').animate({
+                        scrollTop: 0
+                    }, 1000);
+                    return false;
+                }
+                $('body').animate({
+                    scrollTop: 0
+                }, 1000);
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_div">
+            <div id="banner_canvas"></div>
+            <div class="logo"><a href="index.html" title="禾思科技"><img src="images/log.png" alt="禾思科技" />禾思科技</a></div>
+            <div class="nav">
+                <ul>
+                    <li><a href="solve.html" data-transition="slide" title="解决方案" style="color:gray">解决方案</a></li>
+                    <li><a href="product.html" data-transition="slide" title="产品介绍">产品介绍</a></li>
+                    <li><a href="technology.html" data-transition="slide" title="核心技术">核心技术</a></li>
+                    <li><a href="introduce.html" data-transition="slide" title="关于我们">关于我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var config = {
+            vx: 3, //点x轴速度,正为右，负为左
+            vy: 3, //点y轴速度
+            height: 2, //点高宽，其实为正方形，所以不宜太大
+            width: 2,
+            count: 120, //点个数
+            color: "255,255,255", //点颜色
+            stroke: "255,255,255", //线条颜色
+            dist: 15000, //点吸附距离
+            e_dist: 20000, //鼠标吸附加速距离
+            max_conn: 20 //点到点最大连接数
+        }
+        //创建粒子效果canvas
+        CanvasParticle(config);
+    </script>
+    <div class="banner_div"><img src="images/Background.png" alt="关于" />
+        <h1>"云+端"视觉解决方案的领导者</h1>
+        <p></p>
+    </div>
+    <div class="product-container">
+        <div class="product">
+            <div class="content-left">
+                <ul class="product_list border-white">
+                    <li>
+                        <a href="javascript:void(0)" class="img_a" data-id="4" title=""><img src="images/极致用户体验.png" alt="" /></a>
+                        <h3><a href="javascript:void(0)" data-id="4" title="">智能建筑</a></h3>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;禾思科技为建筑提供"云+端"视觉解决方案，提供如人证合一，人脸门禁，楼宇安保，人流分析等服务，从而让建筑更智能，让人们在建筑中更便利的生活和工作！</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-right">
+                <p>功能简介</p>
+                <ul>
+                    <li>1.人脸门禁：方便人员进出</li>
+                    <li>2.人证合一：判别人员身份</li>
+                    <li>3.楼宇安防：保证楼宇安全</li>
+                    <li>4.流量统计：管控人员数量</li>
+                    <li>5.人员识别：提供管理数据</li>
+                    <li>6.数据挖掘：预测可疑人员</li>
+                </ul>
+            </div>
+        </div>
+        <div class="product blue white">
+            <div class="content-l">
+                <p>功能简介</p>
+                <ul>
+                    <li>1.VIP识别：提醒贵客已到</li>
+                    <li>2.流量统计：判断运营情况</li>
+                    <li>3.商业防护：节省经济损失</li>
+                    <li>4.常客判断：挖掘珍贵客户</li>
+                    <li>5.数据统计：运营分析依据</li>
+                    <li>6.数据挖掘：分析产品热度</li>
+                </ul>
+            </div>
+            <div class="content-r">
+                <ul class="product_list border-blue">
+                    <li>
+                        <a href="javascript:void(0)" class="img_a" data-id="4" title=""><img src="images/极致用户体验.png" alt="" /></a>
+                        <h3><a href="javascript:void(0)" data-id="4" title="">智慧商业</a></h3>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;无人酒店，无人商店等新兴商业模式出现在了我们的视野中。禾思提供的视觉解决方案，帮助商户统计人流量，分析顾客属性，促进了智慧商业产业的发展。</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="product">
+            <div class="content-left">
+                <ul class="product_list border-black">
+                    <li>
+                        <a href="javascript:void(0)" class="img_a" data-id="4" title=""><img src="images/极致用户体验.png" alt="" /></a>
+                        <h3><a href="javascript:void(0)" data-id="4" title="">智能家居</a></h3>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;回到家中，我们希望家居能够了解主人的生活习惯，自主为主人服务，因此，智能家居需要有一双智慧的眼睛，禾思科技希望通过观察视觉方案，让家居都能读懂主人。</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-right">
+                <p>功能简介</p>
+                <ul>
+                    <li>1.人脸门禁：方便家人进出</li>
+                    <li>2.房屋安全：守护您的房子</li>
+                    <li>3.家居附能：让家居读懂你</li>
+                    <li>4.守护家人：家人危险预警</li>
+                    <li>5.智能门卫：记录访客信息</li>
+                    <li>6.数据统计：方便房屋管理</li>
+                </ul>
+            </div>
+        </div>
+        <div class="product blue white">
+            <div class="content-l">
+                <p>功能简介</p>
+                <ul>
+                    <li>1.附能 VR：让眼睛更睿智</li>
+                    <li>2.智能柜子：人脸验证取物</li>
+                    <li>3.智慧家居：让家居读懂你</li>
+                    <li>4.智能门禁：大门出入控制</li>
+                    <li>5.附能手机：人脸控制手机</li>
+                    <li>6.自动驾驶：识别前方障碍</li>
+                </ul>
+            </div>
+            <div class="content-r">
+                <ul class="product_list">
+                    <li>
+                        <a href="javascript:void(0)" class="img_a" data-id="4" title=""><img src="images/极致用户体验.png" alt="" /></a>
+                        <h3><a href="javascript:void(0)" data-id="4" title="">智能终端</a></h3>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;人工智能时代，万物将被唤醒。无人售货机、无人机、家电、消费电子等物体，终将有一双智能的眼睛。禾思科技为终端提供嵌入式视觉模组，后端通过云服务为终端提供视觉数据分析服务。唤醒万物，我们希望贡献一部分自己的力量！</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="product">
+            <div class="content-left">
+                <ul class="product_list">
+                    <li>
+                        <a href="javascript:void(0)" class="img_a" data-id="4" title=""><img src="images/极致用户体验.png" alt="" /></a>
+                        <h3><a href="javascript:void(0)" data-id="4" title="">机器人产业</a></h3>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10年之后，每个人都将有一个机器人助理，机器人助理可以认得我们，教我们学习，帮我们打扫房间。我们愿为机器人产业付能，让机器人成为人类的好朋友！</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-right">
+                <p>功能简介</p>
+                <ul>
+                    <li>1.前台接待：接待来访人员</li>
+                    <li>2.情感陪伴：抚慰心理创伤</li>
+                    <li>3.安防卫士：园区智能巡逻</li>
+                    <li>4.智能引导：酒店引导顾客</li>
+                    <li>5.特种士兵：危险救援攻坚</li>
+                    <li>6.儿童教育：讲解儿童课程</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    </ul>
+    <div class="footer">
+        <div class="footer-center">
+            <div class="telephone">
+                <span>电话：0755-2342323</span>
+            </div>
+            <div class="email">
+                <span>邮箱：yzl@heils.cn</span>
+            </div>
+            <div class="address">
+                <span>地址：深圳市南山区软件产业基地5C栋1003E</span>
+            </div>
+
+        </div>
+        <div class="footer-right">
+            <ul>
+                <li><a href="solve.html" title="解决方案">解决方案<span>|</span></a></li>
+                <li><a href="product.html" title="产品介绍">产品介绍<span>|</span></a></li>
+                <li><a href="technology.html" title="核心技术">核心技术<span>|</span></a></li>
+                <li><a href="introduce.html" title="关于我们">关于我们</a></li>
+            </ul>
+            <div class="info">
+                <p>Copyright©2017 深圳禾思科技有限公司</p>
+                <p>陕ICP备16002340号</p>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="toTop"></div>
+    <div class="backDiv"></div>
+
+</body>
+
+</html>
