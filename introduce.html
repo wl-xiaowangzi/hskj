@@ -77,7 +77,10 @@
 		</div>
 	</div>
 	<script type="text/javascript">
-		var config = {
+		var sW = $(document).width();
+		console.log(sW)
+		if(sW>1280){
+			var config = {
 			vx: 3, //点x轴速度,正为右，负为左
 			vy: 3, //点y轴速度
 			height: 2, //点高宽，其实为正方形，所以不宜太大
@@ -91,6 +94,22 @@
 		}
 		//创建粒子效果canvas
 		CanvasParticle(config);
+		}else{
+			var config = {
+			vx: 3, //点x轴速度,正为右，负为左
+			vy: 3, //点y轴速度
+			height: 1, //点高宽，其实为正方形，所以不宜太大
+			width: 1,
+			count: 90, //点个数
+			color: "255,255,255", //点颜色
+			stroke: "255,255,255", //线条颜色
+			dist: 6000, //点吸附距离
+			e_dist: 8000, //鼠标吸附加速距离
+			max_conn: 20 //点到点最大连接数
+		}
+		//创建粒子效果canvas
+		CanvasParticle(config);
+		}
 	</script>
 	<div class="banner_div"><img src="images/Background.png" alt="关于" />
 		<h1>"云+端"视觉解决方案的领导者</h1>
@@ -110,7 +129,7 @@
 					</ul>
 				</div>
 				<div class="content-right">
-					<h1>公司介绍</h1>
+					<h2>公司介绍</h2>
 					<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;深圳禾思科技有限公司是一家专注于计算机视觉的人工智能科技公司，公司深耕人工智能视觉算法、芯片以及大数据研究，用技术打造极致的产品，为各个行业提供业界领先的"云"+"端"视觉解决方案，为智慧建筑、智慧商业、智能家居、机器人产业、智能终端等提供顶尖的视觉服务。</p>
 				</div>
 			</div>
@@ -118,7 +137,7 @@
 		<div class="team-introduction blue white">
 			<div class="content">
 				<div class="content-left">
-					<h1>团队介绍</h1>
+					<h2>团队介绍</h2>
 					<p>我们是一群年轻人、有梦想的人工智能创业者，核心团队来自于cmu卡耐基梅陇大学、上海交通大学、西安交通大学人工智能实验室，曾在百度、腾讯、微软等公司从事视觉研究工作。</p>
 					<p>人工智能时代已经到来，我们相信在不久的将来，万物将被唤醒。我们希望用"云"+"端"视觉解决方案，让万物拥有一双明亮的眼睛，看懂这个世界！</p>
 				</div>
@@ -146,7 +165,7 @@
 					</ul>
 				</div>
 				<div class="content-right">
-					<h1>联系方式</h1>
+					<h2>联系方式</h2>
 					<p>电话：0755-2342323</p>
 					<p>邮箱：510897282@qq.com</p>
 					<p>地址：深圳市南山区软件产业基地5C栋1003E</p>
