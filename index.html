@@ -14,53 +14,15 @@
 	<script src="js/scrollreveal.js"></script>
 	<script src="js/canvas-particle.js"></script>
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" media="screen" />
-
-	<script type="text/javascript">
-		$(document).ready(function (e) {
-			window.sr = ScrollReveal({
-				reset: true
-			});
-			sr.reveal(".banner_div h1,.banner_div p", {
-				duration: 1000,
-				scale: 1,
-				origin: 'top',
-				distance: '20px'
-			}, 500);
-
-			var currentScrollTop = 0;
-			// 返回顶部
-			$(window).scroll(function () {
-				if ($(window).scrollTop() > 500) {
-					$(".toTop").fadeIn(1500);
-				} else {
-					$(".toTop").fadeOut(1500);
-				}
-			});
-
-			//当点击跳转链接后，回到页面顶部位置  
-			$(".toTop").click(function () {
-				if ($('html').scrollTop()) {
-					$('html').animate({
-						scrollTop: 0
-					}, 1000);
-					return false;
-				}
-				$('body').animate({
-					scrollTop: 0
-				}, 1000);
-				return false;
-			});
-
-
-		});
-	</script>
+<!--[if lt IE 10]><script>window.location.href='http://www.mshig.com/acomment/index.html?referrer='+location.href;</script><![endif]-->
 </head>
 
 <body>
-	<div class="header">
+
+	<div class="header" style="background:none;">
 		<div class="header_div">
 			<div id="banner_canvas"></div>
-			<div class="logo"><a href="index.html" data-transition="slide" title="禾思科技"><img src="images/logo.png" alt="禾思科技" /></a></div>
+			<div class="logo"><a href="index.html" data-transition="slide" title="禾思科技"><img src="images/logo_白色.png" alt="禾思科技" /></a></div>
 			<div class="nav">
 				<ul>
 					<li><a href="solve.html" data-transition="slide" title="解决方案">解决方案</a></li>
@@ -271,7 +233,7 @@
 	<div class="footer">
 		<div class="footer-container">
 			<div class="footer-left">
-				<div class="img-box"><img src="images/logo.png" alt=""></div>
+				<div class="img-box"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
 				<p>禾思科技</p>
 			</div>
 			<div class="footer-center">
@@ -279,7 +241,7 @@
 					<span>0755-86703962</span>
 				</div>
 				<div class="email">
-					<span>helis@heils.cn &nbsp;&nbsp;<a href="Mail.heils.cn">员工登录</a></span>
+					<span>helis@heils.cn &nbsp;&nbsp;<a href="http://mail.heils.cn/">员工登录</a></span>
 				</div>
 				<div class="address">
 					<span>深圳市南山区软件产业基地5C栋1003E</span>
@@ -308,6 +270,45 @@
 
 
 	<div class="toTop"></div>
+	<script type="text/javascript">
+		$(document).ready(function (e) {
+			window.sr = ScrollReveal({
+				reset: true
+			});
+			sr.reveal(".banner_div h1,.banner_div p", {
+				duration: 1000,
+				scale: 1,
+				origin: 'top',
+				distance: '20px'
+			}, 500);
+
+			var currentScrollTop = 0;
+			// 返回顶部
+			$(window).scroll(function () {
+				if ($(window).scrollTop() > 500) {
+					$(".toTop").fadeIn(1500);
+				} else {
+					$(".toTop").fadeOut(1500);
+				}
+			});
+
+			//当点击跳转链接后，回到页面顶部位置  
+			$(".toTop").click(function () {
+				if ($('html').scrollTop()) {
+					$('html').animate({
+						scrollTop: 0
+					}, 1000);
+					return false;
+				}
+				$('body').animate({
+					scrollTop: 0
+				}, 1000);
+				return false;
+			});
+
+
+		});
+	</script>
 	<script type="text/javascript">
 		//页面宽度对应的粒子效果配置
 		var sW = $(document).width();
