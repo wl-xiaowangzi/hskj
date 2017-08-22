@@ -19,7 +19,7 @@
 			window.sr = ScrollReveal({
 				reset: true
 			});
-			sr.reveal(".banner_div h1,.banner_div p", {
+			sr.reveal(".technology_div h1,.technology_div p,.technology_div b", {
 				duration: 1000,
 				scale: 1,
 				origin: 'top',
@@ -58,22 +58,23 @@
 <body>
 	<div class="header">
 		<div class="header_div">
-			<div id="banner_canvas"></div>
-			<div class="logo"><a href="index.html" data-transition="slide" title="禾思科技"><img src="images/logo-标准色.png" alt="禾思科技" /></a></div>
+			<!--<div id="banner_canvas"></div>-->
+			<div class="logo"><a href="index.html" data-transition="slide" title="禾思科技"><img src="images/logo_白色.png" alt="禾思科技" /></a></div>
 			<div class="nav">
 				<ul>
 					<li><a href="solve.html" data-transition="slide" title="解决方案">解决方案</a></li>
 					<li><a href="product.html" data-transition="slide" title="产品介绍">产品介绍</a></li>
-					<li><a href="technology.html" data-transition="slide" title="核心技术" style="color:black;font-size:1.2vw;border-bottom:.2vw solid #2767d8;float: left;padding-bottom:1vw;">核心技术</a></li>
+					<li><a href="technology.html" data-transition="slide" title="核心技术" style="color:#2767d8;font-size:1.1vw;border-bottom:.2vw solid #2767d8;float: left;padding-bottom:1.1vw;">核心技术</a></li>
 					<li><a href="introduce.html" data-transition="slide" title="关于我们">关于我们</a></li>
 				</ul>
 
 			</div>
 		</div>
 	</div>
-	<div class="banner_div"><img src="images/首页banner.png" alt="关于" />
-		<h1>"云+端"视觉解决方案的领导者</h1>
-		<p>—— 禾思科技 ——</p>
+	<div class="technology_div"><img src="images/banner.png" alt="关于" />
+		<h1>禾思科技</h1>
+        <p>深耕人工智能视觉算法级芯片和大数据研究</p>
+        <b>为各行业提供顶尖的视觉服务</b>
 	</div>
 	<script type="text/javascript">
 	    //页面宽度对应的粒子效果配置
@@ -116,9 +117,7 @@
 			<div class="content-left">
 				<ul class="product_list">
 					<li>
-						<a href="javascript:void(0)" class="img_a" data-id="4" title=""><img src="images/极致用户体验.png" alt="" /></a>
-						<h3><a href="javascript:void(0)" data-id="4" title="">机器人产业</a></h3>
-						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10年之后，每个人都将有一个机器人助理，机器人助理可以认得我们，教我们学习，帮我们打扫房间。我们愿为机器人产业付能，让机器人成为人类的好朋友！</p>
+						<div class="img-box"><img src="images/图1.png" alt="" /></div>
 					</li>
 				</ul>
 			</div>
@@ -129,31 +128,31 @@
 				<p>3.多平台推理支持，ARM、DSP、FPGA、自研芯片。</p>
 			</div>
 		</div>
-		<div class="technology blue white">
-			<div class="content-left">
-				<ul class="product_list">
-					<li>
-						<a href="javascript:void(0)" class="img_a" data-id="4" title=""><img src="images/极致用户体验.png" alt="" /></a>
-						<h3><a href="javascript:void(0)" data-id="4" title="">机器人产业</a></h3>
-						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10年之后，每个人都将有一个机器人助理，机器人助理可以认得我们，教我们学习，帮我们打扫房间。我们愿为机器人产业付能，让机器人成为人类的好朋友！</p>
-					</li>
-				</ul>
-			</div>
-			<div class="content-right">
+		<div class="technology-center  gray">
+			<div class="technology">
+				<div class="content-right">
 				<h1>前端神经网络芯片</h1>
 				<p>1.专用人像识别人工智能芯片，支持实时的高质量人像检测。</p>
 				<p>2.深度优化的CNN深度学习神经网络算法，性能优异。</p>
 				<p>3.内嵌深度定制的低功耗神经网络专用处理器NNP，运算能力强大。</p>
 			</div>
+			<div class="content-left">
+				<ul class="product_list">
+					<li>
+						<div class="img-box"><img src="images/图2.png" alt="" /></div>
+					</li>
+				</ul>
+			</div>
+			
 
 		</div>
+		</div>
+		
 		<div class="technology">
 			<div class="content-left">
 				<ul class="product_list">
 					<li>
-						<a href="javascript:void(0)" class="img_a" data-id="4" title=""><img src="images/极致用户体验.png" alt="" /></a>
-						<h3><a href="javascript:void(0)" data-id="4" title="">机器人产业</a></h3>
-						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10年之后，每个人都将有一个机器人助理，机器人助理可以认得我们，教我们学习，帮我们打扫房间。我们愿为机器人产业付能，让机器人成为人类的好朋友！</p>
+						<div class="img-box"><img src="images/矢量智能对象.png" alt="" /></div>
 					</li>
 				</ul>
 			</div>
@@ -169,8 +168,7 @@
 	<div class="footer">
 		<div class="footer-container">
 			<div class="footer-left">
-				<div class="img-box"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
-				<p>禾思科技</p>
+				<div class="img-box"><a href="index.html"><img src="images/底部logo.png" alt=""></a></div>
 			</div>
 			<div class="footer-center">
 				<div class="telephone">
@@ -196,7 +194,7 @@
 				</ul>
 				<div class="info">
 					<p>Copyright©2017 深圳禾思科技有限公司</p>
-					<p>粤ICP 17094398号</p>
+					<p>粤ICP备17094398号-1</p>
 				</div>
 
 			</div>
