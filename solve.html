@@ -83,43 +83,21 @@
     <script type="text/javascript">
         var sW = $(document).width();
         if (sW > 1280) {
-            var config = {
-                vx: 3, //点x轴速度,正为右，负为左
-                vy: 3, //点y轴速度
-                height: 2, //点高宽，其实为正方形，所以不宜太大
-                width: 2,
-                count: 120, //点个数
-                color: "255,255,255", //点颜色
-                stroke: "255,255,255", //线条颜色
-                dist: 15000, //点吸附距离
-                e_dist: 20000, //鼠标吸附加速距离
-                max_conn: 20 //点到点最大连接数
-            }
-            //创建粒子效果canvas
-            CanvasParticle(config);
-        } else {
-            var config = {
-                vx: 3, //点x轴速度,正为右，负为左
-                vy: 3, //点y轴速度
-                height: 1, //点高宽，其实为正方形，所以不宜太大
-                width: 1,
-                count: 90, //点个数
-                color: "255,255,255", //点颜色
-                stroke: "255,255,255", //线条颜色
-                dist: 6000, //点吸附距离
-                e_dist: 8000, //鼠标吸附加速距离
-                max_conn: 20 //点到点最大连接数
-            }
-            //创建粒子效果canvas
-            CanvasParticle(config);
+
+        } else { 
+            
         }
     </script>
 
     <div class="solve-container">
         <div class="solve build">
-            <div class="scan"></div>
+            <div class="tags">
+                <img src="./images/1-2-2标签-左.png" alt="">
+                <img src="./images/1-2-1标签-右.png" alt="">
+            </div>
             <div class="content-left">
-                <div class="img-box"><img src="images/1-1-1人像与扫描框.png" alt="" /></div>
+                <div class="img-box">
+                    <div class="scan"></div><img src="images/1-1-1人像与扫描框.png" alt="" /></div>
             </div>
             <div class="content-right">
                 <div class="img-box"><img src="./images/1-智慧建筑_icon筑.png" alt=""></div>
@@ -238,51 +216,65 @@
                     <p>讲解儿童课程</p>
                 </li>
             </ul>
+            <div class="dot-line">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
             <div class="content-l">
+                <div class="img-box"><img src="./images/4-机器人产业_icon.png" alt=""></div>
                 <h3>机器人产业</h3>
                 <p>我们拥有资深的工业设计师和产品设计师团队，我们始终保持一颗匠人之心，去打磨产品，在前端侧，为用户带来极致的用户体验！</p>
 
             </div>
             <div class="content-r">
-                <ul class="solve_list">
-                    <li>
-                        <div class="img-box"><img src="images/极致用户体验.png" alt="" /></div>
-                        <div class="effect-robot">
-
-                        </div>
-                    </li>
-                </ul>
+                
             </div>
         </div>
         <div class="solve terminal">
-             <ul>
-                    <li>附能 VR
-                        <p>让眼睛更睿智</p>
-                    </li>
-                    <li>智能柜子
-                        <p>人脸验证取物</p>
-                    </li>
-                    <li>智慧家居
-                        <p>让家居读懂你</p>
-                    </li>
-                    <li>智能门禁
-                        <p>大门出入控制</p>
-                    </li>
-                    <li>附能手机
-                        <p>人脸控制手机</p>
-                    </li>
-                    <li>自动驾驶
-                        <p>识别前方障碍</p>
-                    </li>
-                </ul>
+            <ul>
+                <li>附能 VR
+                    <p>让眼睛更睿智</p>
+                </li>
+                <li>智能柜子
+                    <p>人脸验证取物</p>
+                </li>
+                <li>智慧家居
+                    <p>让家居读懂你</p>
+                </li>
+                <li>智能门禁
+                    <p>大门出入控制</p>
+                </li>
+                <li>附能手机
+                    <p>人脸控制手机</p>
+                </li>
+                <li>自动驾驶
+                    <p>识别前方障碍</p>
+                </li>
+            </ul>
             <div class="content-left">
                 <div class="img-box"><img src="images/5-1智能终端-底图.png" alt="" /></div>
             </div>
             <div class="content-right">
-                <div class="img-box"><img src="./images/icon_智慧建筑.png" alt=""></div>
+                <div class="img-box"><img src="./images/5-智能终端_icon.png" alt=""></div>
                 <h3>智能终端</h3>
                 <p>我们拥有资深的工业设计师和产品设计师团队，我们始终保持一颗匠人之心，去打磨产品，在前端侧，为用户带来极致的用户体验！</p>
-               
+
             </div>
         </div>
 

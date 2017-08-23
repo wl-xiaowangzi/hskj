@@ -731,6 +731,8 @@ canvas {
 
 
 /*解决方案页面 begin*/
+
+
 /*文字显示 begin*/
 
 .solve_div {
@@ -782,7 +784,6 @@ canvas {
 /*文字显示 end*/
 
 .solve-container {
-    margin-top: 0px;
     width: 100%;
     overflow: hidden;
 }
@@ -791,44 +792,79 @@ canvas {
     width: 100%;
     margin: 0% auto;
     display: flex;
-    font-size: 2vw;
-     padding-top: 7.4vw;
-     height: 41.7vw;
-     box-sizing: border-box;
+    padding-top: 7.4vw;
+    height: 41.7vw;
+    box-sizing: border-box;
 }
 
 .solve-container .solve .content-left {
     flex: 4;
     margin-left: 10vw;
 }
-.solve-container .solve .content-left .img-box{
+
+.solve-container .solve .content-left .img-box {
     height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
-.solve-container .solve .content-left img{
+
+.solve-container .solve .content-left img {
     height: 100%;
+    width: 85%;
 }
+
 .solve-container .solve .content-right {
     flex: 5;
 }
-.build{
+
+.build {
     position: relative;
 }
-.build .scan{
+
+.build .tags img {
     position: absolute;
-    height: 0vw;
+    z-index: 9;
+    opacity: 0;
+    width: 7.1vw;
+}
+
+.build .tags img:nth-child(1) {
+    top: 11vw;
+    left: 15vw;
+    height: 2.5vw;
+}
+
+.build .tags img:nth-child(2) {
+    top: 16vw;
+    left: 38vw;
+    height: 4.2;
+}
+
+.build .scan {
+    position: absolute;
+    height: 9.5vw;
     width: 17.4vw;
     z-index: 9999;
     background-image: url(../images/1-1-2扫描渐变遮罩.png);
-    top: 3.6vw;
-    left: 24.65vw;
+    background-repeat: no-repeat;
+    top: 11.1vw;
+    left: 21.4vw;
+    opacity: 0;
+    background-position-y: -7.5vw;
 }
-.build:hover .scan{
-    top: 12.1vw;
-    height: 7.5vw;
+
+.build:hover .scan {
+    opacity: 1;
+    background-position-y: 1.5vw;
     transition: 1s;
 }
+
+.build:hover .tags img {
+    opacity: 1;
+    transition: 1s 1s;
+}
+
 .solve .content-right .img-box {
     height: 3.1vw;
     width: 3.6vw;
@@ -871,11 +907,13 @@ canvas {
     margin-top: 4.6vw;
     flex-wrap: wrap;
 }
-.solve-container .build{
+
+.solve-container .build {
     background: url(../images/1-3智慧建筑-背景图案叠加.png) no-repeat center center;
     background-size: 100% 100%;
 }
-.solve-container .build .content-right ul li{
+
+.solve-container .build .content-right ul li {
     width: 33%;
     padding-left: 3.5vw;
     margin-bottom: 2.6vw;
@@ -884,40 +922,49 @@ canvas {
     box-sizing: border-box;
     background-size: 2.5vw;
 }
-.solve-container .build .content-right ul li:nth-child(1){
+
+.solve-container .build .content-right ul li:nth-child(1) {
     background: url(../images/1-3-1人脸门禁_icon.png) no-repeat left;
     background-size: 2.5vw;
 }
-.solve-container .build .content-right ul li:nth-child(2){
+
+.solve-container .build .content-right ul li:nth-child(2) {
     background: url(../images/1-3-2人证合一_icon.png) no-repeat left;
     background-size: 2.5vw;
 }
-.solve-container .build .content-right ul li:nth-child(3){
+
+.solve-container .build .content-right ul li:nth-child(3) {
     background: url(../images/1-3-3楼宇安防_icon.png) no-repeat left;
     background-size: 2.5vw;
 }
-.solve-container .build .content-right ul li:nth-child(4){
+
+.solve-container .build .content-right ul li:nth-child(4) {
     background: url(../images/1-3-4流量统计_icon.png) no-repeat left;
     background-size: 2.5vw;
 }
-.solve-container .build .content-right ul li:nth-child(5){
+
+.solve-container .build .content-right ul li:nth-child(5) {
     background: url(../images/1-3-5人员识别_icon.png) no-repeat left;
     background-size: 2.5vw;
 }
-.solve-container .build .content-right ul li:nth-child(6){
+
+.solve-container .build .content-right ul li:nth-child(6) {
     background: url(../images/1-3-6数据挖掘_icon.png) no-repeat left;
     background-size: 2.5vw;
 }
+
 .solve-container .solve .content-right ul li p {
     font-size: .8vw;
     color: #5f7180;
     line-height: 1.5vw;
 }
-.solve-container .business{
-   background: url(../images/2-1智慧商业背景.png) no-repeat center center;
-   background-size: 100% 100%;
-   padding-top: 0;
+
+.solve-container .business {
+    background: url(../images/2-1智慧商业背景.png) no-repeat center center;
+    background-size: 100% 100%;
+    padding-top: 0;
 }
+
 .solve-container .solve .content-l {
     flex: 4;
     box-sizing: border-box;
@@ -960,7 +1007,6 @@ canvas {
     line-height: 1.8vw;
 }
 
-
 .solve-container .solve_list li {
     height: 28.8vw;
 }
@@ -970,6 +1016,7 @@ canvas {
     color: white;
     padding-right: 16%;
 }
+
 .solve-container .business .content-r ul {
     display: flex;
     width: 100%;
@@ -980,6 +1027,7 @@ canvas {
 .solve-container .business .content-r ul li {
     position: absolute;
     font-size: 1.2vw;
+    opacity: 0;
 }
 
 .solve .content-r p {
@@ -988,30 +1036,36 @@ canvas {
     line-height: 1.8vw;
 }
 
-.solve-container .business .content-r ul li:nth-child(1){
-    top:21vw;
+.solve-container .business .content-r ul li:nth-child(1) {
+    top: 21vw;
     left: 0vw;
 }
-.solve-container .business .content-r ul li:nth-child(2){
-    top:7vw;
+
+.solve-container .business .content-r ul li:nth-child(2) {
+    top: 7vw;
     left: 8vw;
 }
-.solve-container .business .content-r ul li:nth-child(3){
-    top:8vw;
+
+.solve-container .business .content-r ul li:nth-child(3) {
+    top: 8vw;
     left: 27vw;
 }
-.solve-container .business .content-r ul li:nth-child(4){
-    top:13.5vw;
+
+.solve-container .business .content-r ul li:nth-child(4) {
+    top: 13.5vw;
     left: 31vw;
 }
-.solve-container .business .content-r ul li:nth-child(5){
-    top:25vw;
+
+.solve-container .business .content-r ul li:nth-child(5) {
+    top: 25vw;
     left: 30vw;
 }
-.solve-container .business .content-r ul li:nth-child(6){
-    top:33vw;
+
+.solve-container .business .content-r ul li:nth-child(6) {
+    top: 33vw;
     left: 8vw;
 }
+
 .business .content-r .img-box {
     overflow: hidden;
     zoom: 1;
@@ -1025,7 +1079,7 @@ canvas {
 }
 
 .business .content-r .img-box img {
-    width: 85%;
+    width: 75%;
     overflow: hidden;
     transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -1033,61 +1087,77 @@ canvas {
     -webkit-transition: all 0.5s ease;
 }
 
-.business .content-r .img-box img:hover {
+.business:hover .content-r .img-box img {
     transform: scale(1.1, 1.1);
     -moz-transform: scale(1.1, 1.1);
     -o-transform: scale(1.1, 1.1);
     -webkit-transform: scale(1.1, 1.1);
     -ms-transform: scale(1.1, 1.1);
 }
-.home{
+
+.business:hover .content-r ul li {
+    opacity: 1;
+    transition: .5s .5s;
+}
+
+.home {
     position: relative;
     padding-top: 2vw;
 }
-.home ul li{
+
+.home ul li {
     position: absolute;
     z-index: 999;
     font-size: 1.2vw;
     font-weight: 600;
+    opacity: 0;
 }
-.home ul li p{
+
+.home ul li p {
     font-size: .8vw;
     line-height: 1.5vw;
     color: #5f7180;
 }
-.home ul li:nth-child(1){
+
+.home ul li:nth-child(1) {
     top: 7vw;
     left: 50vw;
 }
-.home ul li:nth-child(2){
-    top:29vw;
+
+.home ul li:nth-child(2) {
+    top: 29vw;
     left: 45.5vw;
 }
-.home ul li:nth-child(3){
-    top:32.8vw;
+
+.home ul li:nth-child(3) {
+    top: 32.8vw;
     left: 24.5vw;
 }
-.home ul li:nth-child(4){
-     top: 18.5vw;
+
+.home ul li:nth-child(4) {
+    top: 18.5vw;
     left: 49.5vw;
 }
-.home ul li:nth-child(5){
-     top: 12vw;
+
+.home ul li:nth-child(5) {
+    top: 12vw;
     left: 17.5vw;
 }
-.home ul li:nth-child(6){
-     top: 4vw;
+
+.home ul li:nth-child(6) {
+    top: 4vw;
     left: 28.5vw;
 }
-.home .imgs img{
+
+.home .imgs img {
     position: absolute;
-     z-index: 999;
-      overflow: hidden;
+    z-index: 999;
+    overflow: hidden;
     transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
-} 
+}
 
 .home .imgs img:hover {
     transform: scale(1.1, 1.1);
@@ -1096,144 +1166,448 @@ canvas {
     -webkit-transform: scale(1.1, 1.1);
     -ms-transform: scale(1.1, 1.1);
 }
-.home .imgs img:nth-child(1){
+
+.home:hover ul li {
+    opacity: 1;
+    transition: 1s;
+}
+
+.home .imgs img:nth-child(1) {
     top: 7vw;
     left: 25vw;
     width: 3.3vw;
 }
-.home .imgs img:nth-child(2){
+
+.home .imgs img:nth-child(2) {
     top: 4vw;
     left: 41vw;
     width: 8.3vw;
 }
-.home .imgs img:nth-child(3){
+
+.home .imgs img:nth-child(3) {
     top: 18.5vw;
     left: 46vw;
     width: 2.9vw;
 }
-.home .imgs img:nth-child(4){
+
+.home .imgs img:nth-child(4) {
     top: 28vw;
     left: 40vw;
     width: 4.6vw;
 }
-.home .imgs img:nth-child(5){
+
+.home .imgs img:nth-child(5) {
     top: 29vw;
     left: 25vw;
     width: 3.3vw;
 }
-.home .imgs img:nth-child(6){
+
+.home .imgs img:nth-child(6) {
     top: 15vw;
     left: 16vw;
     width: 8.9vw;
 }
-.solve-container .home .content-left{
+
+.solve-container .home .content-left {
     margin-left: 16vw;
     flex: 5;
 }
-.home .content-left .img-box{
+
+.home .content-left .img-box {
     height: 100%;
     width: 100%；
 }
-.home .content-left .img-box img{
+
+.home .content-left .img-box img {
     width: 70%;
     height: 70%;
 }
-.home .content-right{
+
+.home .content-right {
     margin-top: 6vw;
     margin-left: 7vw;
 }
-.solve-container .home .content-right p{
+
+.solve-container .home .content-right p {
     max-width: 28vw;
 }
 
-.robot{
+.robot {
     background: url(../images/4-机器人产业-底图.png) no-repeat center center;
     background-size: 100% 100%;
     color: white;
     position: relative;
 }
-.robot ul li{
+
+.robot ul li {
     position: absolute;
     z-index: 999;
     font-size: 1.2vw;
     font-weight: 600;
+    opacity: 0;
 }
-.robot ul li p{
+
+.robot ul li p {
     font-size: .8vw;
     line-height: 1.5vw;
     color: #5f7180;
 }
-.robot ul li:nth-child(1){
+
+.robot ul li:nth-child(1) {
     top: 20vw;
-    left: 42vw;
+    left: 45vw;
 }
-.robot ul li:nth-child(2){
+
+.robot ul li:nth-child(2) {
     top: 32vw;
     left: 52vw;
 }
-.robot ul li:nth-child(3){
+
+.robot ul li:nth-child(3) {
     top: 29vw;
     left: 67vw;
 }
-.robot ul li:nth-child(4){
+
+.robot ul li:nth-child(4) {
     top: 27vw;
     left: 49vw;
 }
-.robot ul li:nth-child(5){
+
+.robot ul li:nth-child(5) {
     top: 7.5vw;
     left: 77vw;
 }
-.robot ul li:nth-child(6){
+
+.robot ul li:nth-child(6) {
     top: 6.5vw;
     left: 44.5vw;
 }
 
-.solve-container .terminal{
-    margin-bottom: 7.4vw;
+.robot .dot-line .dot {
+    position: absolute;
+    width: .5vw;
+    height: .5vw;
+    background-color: #2767d8;
+    border-radius: 50%;
+    animation: dot infinite 1s;
+}
+
+.robot .dot-line .dot:nth-child(1) {
+    top: 9.2vw;
+    left: 52vw;
+}
+
+.robot .dot-line .dot:nth-child(2) {
+    top: 16.6vw;
+    left: 50vw;
+}
+
+.robot .dot-line .dot:nth-child(3) {
+    top: 21.2vw;
+    left: 56vw;
+}
+
+.robot .dot-line .dot:nth-child(4) {
+    top: 12.2vw;
+    left: 59vw;
+}
+
+.robot .dot-line .dot:nth-child(5) {
+    top: 17.2vw;
+    left: 66vw;
+}
+
+.robot .dot-line .dot:nth-child(6) {
+    top: 23.2vw;
+    left: 76vw;
+}
+
+.robot .dot-line .line {
+    background-color: white;
+    position: absolute;
+}
+
+.robot .dot-line .line:nth-child(7) {
+    top: 9.5vw;
+    left: 44.5vw;
+    height: 1px;
+    width: 0vw;
+}
+
+.robot .dot-line .line:nth-child(8) {
+    top: 17vw;
+    left: 50.25vw;
+    height: 0vw;
+    width: 1px;
+}
+
+.robot .dot-line .line:nth-child(9) {
+    top: 21.7vw;
+    left: 56.25vw;
+    height: 0vw;
+    width: 1px;
+}
+
+.robot .dot-line .line:nth-child(10) {
+    top: 12.7vw;
+    left: 59.25vw;
+    height: 0vw;
+    width: 1px;
+}
+
+.robot .dot-line .line:nth-child(11) {
+    top: 17.7vw;
+    left: 66.25vw;
+    height: 0vw;
+    width: 1px;
+}
+
+.robot .dot-line .line:nth-child(12) {
+    top: 10.5vw;
+    left: 76.25vw;
+    height: 0vw;
+    width: 1px;
+}
+
+.robot .dot-line .line:nth-child(13) {
+    top: 9.5vw;
+    left: 44.5vw;
+    height: 1px;
+    width: 0vw;
+}
+
+.robot .dot-line .line:nth-child(14) {
+    top: 23vw;
+    left: 45vw;
+    height: 1px;
+    width: 0vw;
+}
+
+.robot .dot-line .line:nth-child(15) {
+    top: 30.2vw;
+    left: 49vw;
+    height: 1px;
+    width: 0vw;
+}
+
+.robot .dot-line .line:nth-child(16) {
+    top: 35.2vw;
+    left: 52vw;
+    height: 1px;
+    width: 0vw;
+}
+
+.robot .dot-line .line:nth-child(17) {
+    top: 32.2vw;
+    left: 66.25vw;
+    height: 1px;
+    width: 0vw;
+}
+
+.robot .dot-line .line:nth-child(18) {
+    top: 10.5vw;
+    left: 76.25vw;
+    height: 1px;
+    width: 0vw;
+}
+
+.robot:hover ul li {
+    opacity: 1;
+    -webkit-transition: .5s .5s;
+    -moz-transition: .5s .5s;
+    transition: .5s .5s;
+}
+
+.robot:hover .dot-line .line:nth-child(7) {
+    width: 7.5vw;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    transition: .5s;
+}
+
+.robot:hover .dot-line .line:nth-child(8) {
+    height: 6vw;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    transition: .5s;
+}
+
+.robot:hover .dot-line .line:nth-child(9) {
+    height: 8.5vw;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    transition: .5s;
+}
+
+.robot:hover .dot-line .line:nth-child(10) {
+    height: 22.5vw;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    transition: .5s;
+}
+
+.robot:hover .dot-line .line:nth-child(11) {
+    height: 14.5vw;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    transition: .5s;
+}
+
+.robot:hover .dot-line .line:nth-child(12) {
+    height: 12.8vw;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    transition: .5s;
+}
+
+.robot:hover .dot-line .line:nth-child(14) {
+    width: 5.25vw;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    transition: .5s;
+}
+
+.robot:hover .dot-line .line:nth-child(15) {
+    width: 7.25vw;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    transition: .5s;
+}
+
+.robot:hover .dot-line .line:nth-child(16) {
+    width: 7.25vw;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    transition: .5s;
+}
+
+.robot:hover .dot-line .line:nth-child(17) {
+    width: 5.5vw;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    transition: .5s;
+}
+
+.robot:hover .dot-line .line:nth-child(18) {
+    width: 5.5vw;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    transition: .5s;
+}
+
+@keyframes dot {
+    from {
+        transform: scale(.8, .8);
+        opacity: .8;
+    }
+    to {
+        transform: scale(1, .1);
+        opacity: 1;
+    }
+}
+
+.robot .content-l {
+    padding-top: 6vw;
+}
+
+.solve-container .terminal {
+    padding-bottom: 7.4vw;
     margin-left: 6vw;
 }
-.terminal{
+
+.terminal {
     position: relative;
 }
-.terminal ul li{
+
+.terminal ul li {
     position: absolute;
     z-index: 999;
     font-size: 1.2vw;
     font-weight: 600;
+    opacity: 0;
 }
-.terminal ul li p{
+
+.terminal ul li p {
     font-size: .8vw;
     line-height: 1.5vw;
     color: #5f7180;
 }
-.terminal .content-left .img-box{
+
+.terminal ul li:nth-child(1) {
+    top: 19.6vw;
+    left: 43vw;
+}
+
+.terminal ul li:nth-child(2) {
+    top: 13.6vw;
+    left: 38vw;
+}
+
+.terminal ul li:nth-child(3) {
+    top: 22.6vw;
+    left: 33vw;
+}
+
+.terminal ul li:nth-child(4) {
+    top: 11.6vw;
+    left: 26.4vw;
+}
+
+.terminal ul li:nth-child(5) {
+    top: 22.6vw;
+    left: 18.3vw;
+}
+
+.terminal ul li:nth-child(6) {
+    top: 11.6vw;
+    left: 13vw;
+}
+
+.terminal .content-left .img-box {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     width: 34vw;
     height: 100%;
     background-image: url(../images/5-2智能终端-图标.png);
-    background-size: 24.6vw 11.8vw;
+    background-size: 22.6vw 10.8vw;
     background-repeat: no-repeat;
     background-position-x: center;
-    background-position-y: 25vw;
+    background-position-y: 19.45vw;
     transition: 1s;
 }
-.terminal .content-left .img-box img{
+
+.terminal .content-left .img-box img {
     width: 100%;
     height: 27.7%;
     background-color: white;
 }
-.terminal:hover .img-box{
-    background-position-y: 11vw;
-     background-size: 26.6vw 12.8vw;
+
+.terminal:hover .content-left .img-box {
+    background-position-y: 3.6vw;
+    background-size: 26.6vw 12.8vw;
     transition: 1s;
 }
+
+.terminal:hover ul li {
+    opacity: 1;
+    transition: .5s .5s;
+}
+
+.terminal .content-right {
+    margin-top: 7vw;
+    margin-left: 6vw;
+}
+
+
 /*解决方案页面 end*/
 
 
 /*核心技术模块*/
+
+
 /*文字显示 begin*/
+
 .technology_div {
     color: #FFF;
     width: 100%;
@@ -1398,7 +1772,7 @@ canvas {
     font-size: 1.1vw;
     font-weight: 100;
     position: absolute;
-    top: 60%;
+    top: 64%;
     padding-left: 20%;
     text-align: left;
     color: #dedede;
@@ -1418,7 +1792,6 @@ canvas {
     color: #000;
     padding: 0vw 0 .8vw 0;
     text-align: center;
-    /*margin-top: 3vw;*/
 }
 
 .product-container h3 {
@@ -1683,55 +2056,31 @@ canvas {
 }
 
 .company-introduction .content {
-    width: 80%;
+    width: 66%;
     margin: 0% auto;
-    font-size: 1.1vw;
-    text-align: center;
-    line-height: 2vw;
-    margin-bottom: 7.4vw;
+    font-size: .9vw;
+    text-align: left;
+    line-height: 1.8vw;
 }
 
 .company-introduction .content p {
     color: #5f7180;
 }
 
-.company-introduction .company-banner {
+.company-introduction .content p span {
+    color: #2767d8;
+    font-size: 1.1vw;
+}
+
+.company-introduction .content .img-box {
+    margin-top: 2.1vw;
     width: 100%;
-    height: 13vw;
-    background-color: skyblue;
-}
-
-.company-introduction .company-banner .img-container {
-    width: 80%;
     height: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 
-.company-introduction .company-banner .img-box {
-    height: 4.5vw;
-    /*width: 4.5vw;*/
-}
-
-.company-introduction .company-banner .img-box img {
-    height: 3.1vw;
-}
-
-.company-introduction .company-banner .img-box p {
-    color: white;
-    font-size: .9vw;
-    margin-top: .2vw;
-}
-
-.company-introduction .company-banner .img-box img:hover {
-    transition: .4s;
-    transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
+.company-introduction .content .img-box img {
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -1756,10 +2105,54 @@ canvas {
 }
 
 .team-introduction .content {
-    width: 100%;
+    width: 66%;
     margin: 0% auto;
-    height: 37.7vw;
     font-size: 2vw;
+}
+
+.team-introduction .content .team-info {
+    background: url(../images/2-1我们的团队底图.png) no-repeat;
+    display: flex;
+    background-size: 100% 33.8vw;
+    justify-content: space-between;
+    padding-left: 9.4vw;
+    padding-right: 9.4vw;
+    padding-top: 28vw;
+}
+
+.team-introduction .content .team-info .info-left {
+    flex: 1;
+}
+
+.team-introduction .content .team-info .info-right {
+    flex: 4;
+    font-size: .8vw;
+    margin-left: 1vw;
+    line-height: 1.5vw;
+    color: #5f7180;
+}
+
+.team-introduction .content .team-info .info-right p span {
+    color: #2767d8;
+    font-size: 1.1vw;
+}
+
+.mt {
+    margin-top: 1vw;
+}
+
+.BMap_noprint {
+    background: url(../images/3联系我们-地图标签.png) no-repeat center center!important;
+    animation: icon-shack infinite .8s;
+}
+
+@keyframes icon-shack {
+    from {
+        transform: scale(.8, .8)
+    }
+    to {
+        transform: scale(1, 1)
+    }
 }
 
 
@@ -1770,68 +2163,46 @@ canvas {
 
 .contact {
     margin-bottom: 7.4vw;
+    margin-top: 7.4vw;
 }
 
 .contact h2 {
     font-size: 2.2vw;
     color: #000;
-    text-align: left;
-    margin-left: 15vw;
+    text-align: center;
     padding-bottom: .4vw;
 }
 
 .contact h3 {
     font-size: 1.4vw;
-    text-align: left;
+    text-align: center;
     margin-bottom: 5.2vw;
     color: #D2D6D8;
-    margin-left: 15vw;
 }
 
 .contact .content {
-    width: 100%;
+    width: 66%;
     margin: 0% auto;
-    display: flex;
     font-size: 2vw;
     background-repeat: no-repeat;
+    color: #5f7180;
 }
 
-.contact .content .content-left {
-    flex: 1;
-    width: 100%;
-    margin-left: 5vw;
+.contact .content .contact-info {
+    margin-bottom: 1.3vw;
+    display: flex;
+    justify-content: center;
 }
 
-.contact .content .content-left .img-box {
-    height: 35vw;
-    width: 100%;
+.contact .content .contact-info .tel {
+    margin-right: 4.1vw;
 }
 
-.contact .content .content-right {
-    flex: 1;
-    font-size: 2vw;
+.contact .content .contact-info .location {
+    margin-left: 4.1vw;
 }
 
-.contact .content .content-right .contact-info {
-    background-color: #2767d8;
-    color: white;
-    width: 43vw;
-    height: 13vw;
-    padding-left: 15vw;
-    padding-top: 7vw;
-}
-
-.contact .content .content-right .contact-info h4 {
-    font-size: .8vw;
-    margin-bottom: .8vw;
-}
-
-.contact .content .content-right .contact-info .tel {
-    font-size: 2vw;
-    margin-bottom: 2.6vw;
-}
-
-.contact .content .content-right p {
+.contact .content p {
     line-height: 1.5vw;
     font-size: .8vw;
 }
