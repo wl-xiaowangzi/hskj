@@ -579,7 +579,6 @@ canvas {
     -o-transform: scale(1, 1);
     -webkit-transform: scale(1, 1);
     -ms-transform: scale(1, 1);
-    opacity: .9;
 }
 
 .news_list li img:hover {
@@ -631,16 +630,13 @@ canvas {
     margin: 0 5%;
 }
 
-
 .specialty_list li a {
     color: #0f273b;
 }
 
-.specialty_list li a:hover {
-    opacity: 0.8;
-}
 
-.specialty_list li a.img_a {
+
+.specialty_list li .img_a {
     display: block;
     width: 100%;
     overflow: hidden;
@@ -661,7 +657,6 @@ canvas {
 }
 
 .specialty_list li img:hover {
-    filter: invert(100%);
     transform: scale(1.1, 1.1);
     -moz-transform: scale(1.1, 1.1);
     -o-transform: scale(1.1, 1.1);
@@ -736,6 +731,7 @@ canvas {
 .solve_div {
     color: #FFF;
     width: 100%;
+    height: 33.8vw;
     overflow: hidden;
     position: relative;
     font-size: 0;
@@ -780,10 +776,38 @@ canvas {
 
 
 /*文字显示 end*/
-
+/*锚点定位居中 begin*/
+#build2{
+    padding-top: 4vw;
+    margin-top: -4vw;
+    position: relative;
+}
+#business2{
+    padding-top: 4vw;
+    margin-top: -4vw;
+    position: relative;
+}
+#home2{
+    padding-top: 4vw;
+    margin-top: -4vw;
+    position: relative;
+}
+#robot2{
+    padding-top: 4vw;
+    margin-top: -4vw;
+    position: relative;
+}
+#terminal2{
+    padding-top: 4vw;
+    margin-top: -4vw;
+    position: relative;
+}
+/*锚点 end*/
 .solve-container {
     width: 100%;
     overflow: hidden;
+    position: relative;
+    z-index: 10;
 }
 
 .solve-container .solve {
@@ -803,14 +827,12 @@ canvas {
 .solve-container .solve .content-left .img-box {
     height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 .solve-container .solve .content-left img {
-    display: block;
     height: 100%;
     width: 85%;
+    margin-left: 3vw;
 }
 
 .solve-container .solve .content-right {
@@ -819,6 +841,7 @@ canvas {
 
 .build {
     position: relative;
+    overflow: hidden;
 }
 
 .build .tags img {
@@ -850,19 +873,19 @@ canvas {
     top: 11.1vw;
     left: 21.4vw;
     background-size: 17.4vw 7.5vw;
-    /*opacity: 0;*/
+    opacity: 0;
     background-position-y: -7.5vw;
 }
 
 .build:hover .scan {
     opacity: 1;
     background-position-y: 1.5vw;
-    transition: 1s;
+    transition: .5s;
 }
 
 .build:hover .tags img {
     opacity: 1;
-    transition: 1s 1s;
+    transition: .5s .5s;
 }
 
 .solve .content-right .img-box {
@@ -1067,18 +1090,16 @@ canvas {
 }
 
 .business .content-r .img-box {
-    overflow: hidden;
     zoom: 1;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    margin-left: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-left: 11%;
+    margin-top: 8vw;
 }
 
 .business .content-r .img-box img {
+    margin-left: 2.15vw;
     width: 75%;
     overflow: hidden;
     transition: all 0.5s ease;
@@ -1215,7 +1236,8 @@ canvas {
 
 .home .content-left .img-box {
     height: 100%;
-    width: 100%；
+    width: 100%;
+    padding-left: 2.5vw;
 }
 
 .home .content-left .img-box img {
@@ -1496,13 +1518,17 @@ canvas {
 }
 
 @keyframes dot {
-    from {
-        transform: scale(.8, .8);
-        opacity: .8;
+    0% {
+        transform: scale(.5, .5);
+        opacity: 0;
     }
-    to {
-        transform: scale(1, .1);
+    50%{
+        transform: scale(1, 1);
         opacity: 1;
+    }
+   100% {
+        transform: scale(.5, .5);
+        opacity: 0;
     }
 }
 
@@ -1564,40 +1590,38 @@ canvas {
 }
 
 .terminal .content-left .img-box {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    padding-top: 18.5vw;
     width: 34vw;
-    height: 100%;
+    height: 40vw;
     background-image: url(../images/5-2智能终端-图标.png);
-    background-size: 22.6vw 10.8vw;
+    background-size: 22.6vw 10vw;
     background-repeat: no-repeat;
     background-position-x: center;
-    background-position-y: 19.4vw;
+    background-position-y: 18.5vw;
     -webkit-transition: .5s;
     -moz-transition: .5s;
     transition: .5s;
 }
 
 .terminal .content-left .img-box img {
-    width: 100%;
-    height: 27.8%;
+    width: 33.7vw;
+    height: 10vw;
     background-color: white;
 }
 
 .terminal:hover .content-left .img-box {
     background-position-y: 3.6vw;
     background-size: 26.6vw 12.8vw;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    transition: 1s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    transition: .5s;
 }
 
 .terminal:hover ul li {
     opacity: 1;
-    -webkit-transition: .5s 1s;
-    -moz-transition: .5s 1s;
-    transition: .5s 1s;
+    -webkit-transition: .5s .5s;
+    -moz-transition: .5s .5s;
+    transition: .5s .5s;
 }
 
 .terminal .content-right {
@@ -1694,9 +1718,7 @@ canvas {
     width: 90%;
     filter: invert(0%);
 }
-.tec-container .technology .content-left .img-box img:hover{
-    filter: invert(100%);
-}
+
 .tec-container .technology .content-right {
     flex: 7;
     padding-left: 7.4vw;
@@ -1891,7 +1913,6 @@ canvas {
     height: 13vw;
     width: 20vw;
     margin-top: 5vw;
-    overflow: hidden;
     flex: 1;
     display: flex;
     justify-content: center;
@@ -1976,9 +1997,7 @@ canvas {
 .cloud .cloud_list li:hover {
     border-color: #d6d6d6;
 }
-.cloud .cloud_list li:hover img{
-    filter: invert(100%);
-}
+
 .cloud .cloud_list .img-box {
     width: 5.8vw;
     height: 5.8vw;
@@ -2064,12 +2083,13 @@ canvas {
     color: #000;
     text-align: center;
     margin-top: 7.4vw;
+    padding-bottom: .4vw;
 }
 
 .company-introduction h3 {
     font-size: 1.4vw;
     text-align: center;
-    margin-bottom: 3.2vw;
+    margin-bottom: 5.2vw;
     color: #D2D6D8;
 }
 
@@ -2078,11 +2098,11 @@ canvas {
     margin: 0% auto;
     font-size: 1vw;
     text-align: left;
-    line-height: 1.8vw;
 }
 
 .company-introduction .content p {
     color: #5f7180;
+    line-height: 1.8vw;
 }
 
 .company-introduction .content p span {
